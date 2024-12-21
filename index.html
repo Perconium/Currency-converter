@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    
+</head>
+<body>
+    <header>
+        <h1>Currency Converter</h1>
+    </header>
+    <main>
+        <div class="converter">
+            <h2>Convert Your Currency</h2>
+            <div class="currency-selection">
+                <select id="fromCurrency">
+                    <option value="USD">USD - $</option>
+                    <option value="EUR">EUR - €</option>
+                    <option value="JPY">JPY - ¥</option>
+                    <option value="GBP">GBP - £</option>
+                    <option value="AUD">AUD - A$</option>
+                    <option value="INR">INR - ₹</option>
+                </select>
+
+                <input type="number" id="amount" placeholder="Amount" />
+
+                <select id="toCurrency">
+                    <option value="EUR">EUR - €</option>
+                    <option value="USD">USD - $</option>
+                    <option value="JPY">JPY - ¥</option>
+                    <option value="GBP">GBP - £</option>
+                    <option value="AUD">AUD - A$</option>
+                    <option value="INR">INR - ₹</option>
+                </select>
+            </div>
+
+            <button id="convertBtn">Convert</button>
+
+            <div id="result" class="result"></div>
+        </div>
+    </main>
+    <footer>
+        <p>Credits: Lucky :)</p>
+    </footer>
+</body>
+</html>

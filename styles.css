@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(90deg, #1a1a2e, #0f3460);
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: rgba(15, 52, 96, 0.9);
+    color: #e0e0e0;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid #00adb5;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.converter {
+    background: rgba(15, 52, 96, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #00adb5;
+    text-shadow: 0 0 10px rgba(0, 173, 181, 0.7);
+}
+
+.currency-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+select, input {
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #00adb5;
+    border-radius: 8px;
+    background: transparent;
+    color: #4da0ff;
+    transition: border-color 0.3s, background-color 0.3s;
+    font-size: 1em;
+}
+
+select:focus, input:focus {
+    border-color: #00adb5;
+    outline: none;
+    background-color: rgba(0, 173, 181, 0.2);
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    background: linear-gradient(90deg, #00adb5, #00d2d2);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 15px;
+    width: 47%;
+    transition: all 0.3s;
+    font-weight: bold;
+    font-size: 1em;
+    position: relative;
+    overflow: hidden;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    transition: width 0.4s, left 0.4s;
+    z-index: 0;
+}
+
+button:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+button:hover {
+    color: #333;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 1.4em;
+    text-align: center;
+    color: #00adb5;
+    text-shadow: 0 0 10px rgba(0, 173, 181, 0.7);
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    font-size: 0.9em;
+    color: #777;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 4px;
+    background: #00adb5;
+    transform: translateX(-50%);
+}
